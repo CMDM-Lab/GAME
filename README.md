@@ -32,13 +32,14 @@ Please make sure that the libgamefft library is installed on your system. (Refer
 
 ### A. installing the libgamefft
 
-This will compile and install the library in /usr/lib/
+This will compile and install the library in `/usr/lib/`
 From the distribution's root run:
 
+```
 cd lib/libgamefft
 make
 sudo make install
-
+```
 
 ### B. installing the Python distribution
 
@@ -55,9 +56,9 @@ When installing the distribution, a script called csccp-solver-cli is installed.
 ### A. Solving CSCCPs
 
 Thanks to it you can solve CSCCP using different methods. Go at GAME/bin and type:
-
+```
 $> csccp-solver-cli -s GAME/examples/normal/example-data -m 168.195105 -v idp -l cc -r 3 -c 0 --dec 5
-
+```
 The program of csccp-solver-cli (GAME) will use the seed scaffolds included in the sepcified foldder after "-s" (the file in this case is s0000000001) 
 to identified the structures having a targeted weight 168.195105 (-m 168.195105) in configuration 0 (-c 0) and ourput the top 3 (-r 3)  most probable
 molecules.  The csccp-solver-cli used the DP algorithm (-v idp), implemented in C++ (-v cc).
@@ -66,7 +67,7 @@ PS. In general, r is set to 3~10, dec is set to 1~5
     In the file of *.cIdx, assume that the number in line 3 is x, we can set the index of configuration (-c) from 0 to x-1.
 
 You should get this output in this case:
-
+```
 ------------------csccp info----------------
 scaffold: s0000000001
 n: 2
@@ -92,16 +93,16 @@ ________________________________________________________________________________
 1.	1.972266e-04	1.681951e+02	C1C/C(=C\CC)C(=O)CC1CO
 2.	1.150488e-04	1.681951e+02	C1C/C(=C\CCO)C(=O)CC1C
 3.	6.574219e-05	1.681951e+02	C1C/C(=C\O)C(=O)CC1C(C)C
-
+```
 
 ### B. Query information on scaffolds
 
 To query information on a scaffold file you can type:
-
+```
 $> csccp-solver-cli -s data/full_set/normal/s0000000001 -i
-
+```
 You should get this output:
-
+```
 name: s0000000001
 popularity: 20
 scaffold_weight_plus_hydrogens: 110.1537
@@ -109,7 +110,7 @@ min_possible_weight: 152.120115
 max_possible_weight: 498.210115
 number of configurations: 8
 max number of compounds: 0:30 1:36 2:6 3:90 4:60 5:180 6:5 7:20
-
+```
 
 Other informations
 ==================
