@@ -14,7 +14,7 @@ A GPU accelerated version of the DP, named GAME, developed by Alioune Schurz is 
 
 - numpy >= 1.7.1
 - openbabel-python >= 1.3
-- jinja2
+- [Jinja2](http://jinja.pocoo.org/)
 
 ### B. for GPU support:
 
