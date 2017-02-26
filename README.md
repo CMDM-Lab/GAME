@@ -5,24 +5,25 @@
 This program enables to identify the main structures with the given targeted molecular weight and seed scaffolds.
 The core optimization problem solved within this procedure (referred as CSCCP) is solved in this distribution by implementing a Dynamic programming algorithm (DP):
 
-A GPU accelerated version of the DP, named GAME, developed by Alioune Schurz is implemented in this library. 
+A GPU accelerated version of the DP, named **GAME**, developed by Alioune Schurz is implemented in this library. 
 
 
 ## Dependencies 
 
-### A. for basic Functionalities:
-
-- numpy >= 1.7.1
-- openbabel-python >= 1.3
+### A. For basic Functionalities:
+- Python 2.6
+- [Numpy](http://www.numpy.org/) >= 1.7.1
+- [Open Babel](http://openbabel.org/wiki/Main_Page) cpython binding >= 1.3
 - [Jinja2](http://jinja.pocoo.org/)
 
-### B. for GPU support:
+### B. For GPU support:
 
-- cuda 5
-- pycuda
-don't forget to configure the path and to mount the device in /dev (c.f. CUDA installation guide)
+- CUDA 5
+- [PyCUDA](https://documen.tician.de/pycuda/#)
 
-### C. for cluster support:
+Don't forget to configure the path and to mount the device in /dev (c.f. CUDA installation guide)
+
+### C. For cluster support:
 
 make sure you install hadoop-1.0.3
 
@@ -30,7 +31,7 @@ make sure you install hadoop-1.0.3
 
 Please make sure that the libgamefft library is installed on your system. (Refer to the section A)
 
-### A. installing the libgamefft
+### A. Instal the libgamefft
 
 This will compile and install the library in `/usr/lib/`
 From the distribution's root run:
@@ -41,23 +42,23 @@ make
 sudo make install
 ```
 
-### B. installing the Python distribution
+### B. Instal the Python distribution
 
 It is very simple, just do:
 
-1. Install libgamefft (cf. section A)
-2. From the distribution's root run:  python setup.py install 
+1. Install libgamefft (refer to the section A)
+2. From the distribution's root run:  `python setup.py install`
 3. Test the distribution by running test.py 
 
 ## Command line interface
 
 When installing the distribution, a script called csccp-solver-cli is installed. 
 
-### A. Solving CSCCPs
+### A. Solve CSCCPs
 
 Thanks to it you can solve CSCCP using different methods. Go at GAME/bin and type:
 ```
-$> csccp-solver-cli -s GAME/examples/normal/example-data -m 168.195105 -v idp -l cc -r 3 -c 0 --dec 5
+$> csccp-solver-cli -s GAME/examples/example-data -m 168.195105 -v idp -l cc -r 3 -c 0 --dec 5
 ```
 The program of csccp-solver-cli (GAME) will use the seed scaffolds included in the sepcified foldder after "-s" (the file in this case is s0000000001) 
 to identified the structures having a targeted weight 168.195105 (-m 168.195105) in configuration 0 (-c 0) and ourput the top 3 (-r 3)  most probable
@@ -112,8 +113,8 @@ number of configurations: 8
 max number of compounds: 0:30 1:36 2:6 3:90 4:60 5:180 6:5 7:20
 ```
 
-Other informations
-==================
+## Other informations
+
 The identified(validated) main structures in our four tesing natural products were provided in the GAME/examples/Datasets/structures
 
 All seed scaffolds (*.cIdx files) in our collected database that can be used as input of the "csccp-solver-cli" program were provided in the GAME/examples/core_index
