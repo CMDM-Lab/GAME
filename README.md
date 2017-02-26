@@ -1,42 +1,36 @@
-===========================================
-Lib Gamefft 
-===========================================
+# Lib Gamefft 
 
-Author: Alioune Schurz
+### Author: Alioune Schurz
 
 This program enables to identify the main structures with the given targeted molecular weight and seed scaffolds.
 The core optimization problem solved within this procedure (referred as CSCCP) is solved in this distribution by implementing a Dynamic programming algorithm (DP):
+
 A GPU accelerated version of the DP, named GAME, developed by Alioune Schurz is implemented in this library. 
 
 
-Dependencies 
-============
+## Dependencies 
 
-A. for basic Functionalities:
------------------------------
+### A. for basic Functionalities:
 
-numpy >= 1.7.1
-openbabel-python >= 1.3
-jinja2
+- numpy >= 1.7.1
+- openbabel-python >= 1.3
+- jinja2
 
-B. for GPU support:
--------------------
+### B. for GPU support:
 
-cuda 5
-pycuda
+- cuda 5
+- pycuda
 don't forget to configure the path and to mount the device in /dev (c.f. CUDA installation guide)
 
-C. for cluster support:
------------------------
+### C. for cluster support:
+
 make sure you install hadoop-1.0.3
 
-Installation 
-============
+## Installation
 
 Please make sure that the libgamefft library is installed on your system. (Refer to the section A)
 
-A installing the libgamefft
----------------------------
+### A. installing the libgamefft
 
 This will compile and install the library in /usr/lib/
 From the distribution's root run:
@@ -46,8 +40,7 @@ make
 sudo make install
 
 
-B installing the Python distribution
-------------------------------------
+### B. installing the Python distribution
 
 It is very simple, just do:
 
@@ -55,13 +48,11 @@ It is very simple, just do:
 2. From the distribution's root run:  python setup.py install 
 3. Test the distribution by running test.py 
 
-Command line interface
-======================
+## Command line interface
 
 When installing the distribution, a script called csccp-solver-cli is installed. 
 
-A Solving CSCCPs
-----------------
+### A. Solving CSCCPs
 
 Thanks to it you can solve CSCCP using different methods. Go at GAME/bin and type:
 
@@ -103,8 +94,7 @@ ________________________________________________________________________________
 3.	6.574219e-05	1.681951e+02	C1C/C(=C\O)C(=O)CC1C(C)C
 
 
-B Query information on scaffolds
---------------------------------
+### B. Query information on scaffolds
 
 To query information on a scaffold file you can type:
 
