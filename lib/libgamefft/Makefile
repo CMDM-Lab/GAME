@@ -1,6 +1,6 @@
 LIBNAME=libgamefft
 VERSION=1.0
-LIBDIR=/usr/lib
+LIBDIR=/usr/local/lib
 
 all:
 	make gamefft
