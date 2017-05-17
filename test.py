@@ -1,10 +1,10 @@
 #!/usr/bin/env python
+import sys,os
+sys.path.remove(os.getcwd())
+
 
 import unittest
 from gamefft.test.tests import ResultValidationTest
-
-import sys,os
-sys.path.remove(os.getcwd())
 
 
 if __name__=="__main__":
