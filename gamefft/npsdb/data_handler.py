@@ -469,7 +469,7 @@ class Scaffold:
 				continue
 				
 			Idx+=1
-		if position+1<self.scaffoldLength: 
+		if [] in self.sidechainlist: 
 			raise ScaffoldCorrupted("Warning: some positions are missing: %d/%d. The file is probably corrupted." %(position+1,self.scaffoldLength))
 			
 		if not self.popularity:
@@ -610,7 +610,7 @@ class Scaffold:
 				continue
 				
 			Idx+=1
-		if position+1<self.scaffoldLength: 
+		if [] in self.sidechainlist:
 			raise ScaffoldCorrupted("Warning: some positions are missing: %d/%d. The file is probably corrupted." %(position+1,self.scaffoldLength))
 			
 		if not self.popularity:
