@@ -26,6 +26,18 @@ don't forget to configure the path and to mount the device in /dev (c.f. CUDA in
 
 make sure you install hadoop-1.0.3
 
+## Downloading
+
+You may use `git clone` for downloading the source code:
+
+```
+git clone https://github.com/CMDM-Lab/GAME.git
+```
+
+Or download the zip file directly:
+
+https://github.com/CMDM-Lab/GAME/zipball/master
+
 ## Installation
 
 Please make sure that the libgamefft library is installed on your system. (Refer to the section A)
