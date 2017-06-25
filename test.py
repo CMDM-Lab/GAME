@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+import sys,os
+sys.path.remove(os.getcwd())
+
 
 import unittest
 from gamefft.test.tests import ResultValidationTest

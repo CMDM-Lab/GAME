@@ -1,4 +1,7 @@
 from distutils.core import setup
+import os
+
+os.umask(022)
 
 setup(
     name='gamefft',
@@ -10,7 +13,7 @@ setup(
     url='',
     license='LICENSE.txt',
     description='Programs for solving Chemical Substituent Core Combinatorial Problem',
-    long_description=open('README.txt').read(),
+    long_description=open('README.md').read(),
     install_requires=[
         "numpy >= 1.7.1",
         "openbabel-python >= 1.3",

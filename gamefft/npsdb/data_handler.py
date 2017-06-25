@@ -55,7 +55,7 @@ class CSCCP:
 	class Result:
 		'''This class represents the parameters to be given to a CSCCP solver.'''
 		def __init__(self,data):
-			if not str(data.dtype)=="[('p', '<f8'), ('w', '<f8'), ('comp', '|O8')]":
+			if not str(data.dtype)=="[('p', '<f8'), ('w', '<f8'), ('comp', 'O')]":
 				print "CSCCP.Result.__init__(): Something is wrong with the dtype of the argument... terminating"
 				exit()
 			self.data=data
@@ -329,7 +329,7 @@ class CSCCPResult:
 	'''This class represents the parameters to be given to a CSCCP solver.'''
 
 	def __init__(self,data):
-		if not str(data.dtype)=="[('p', '<f8'), ('w', '<f8'), ('comp', '|O8')]":
+		if not str(data.dtype)=="[('p', '<f8'), ('w', '<f8'), ('comp', 'O')]":
 			print "CSCCPResult.__init__(): Something is wrong with the dtype of the argument... terminating"
 			exit()
 		self.data=data
@@ -469,7 +469,7 @@ class Scaffold:
 				continue
 				
 			Idx+=1
-		if position+1<self.scaffoldLength: 
+		if [] in self.sidechainlist: 
 			raise ScaffoldCorrupted("Warning: some positions are missing: %d/%d. The file is probably corrupted." %(position+1,self.scaffoldLength))
 			
 		if not self.popularity:
@@ -610,7 +610,7 @@ class Scaffold:
 				continue
 				
 			Idx+=1
-		if position+1<self.scaffoldLength: 
+		if [] in self.sidechainlist:
 			raise ScaffoldCorrupted("Warning: some positions are missing: %d/%d. The file is probably corrupted." %(position+1,self.scaffoldLength))
 			
 		if not self.popularity:
