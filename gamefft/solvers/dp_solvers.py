@@ -139,7 +139,10 @@ class Encoder1(AbstractEncoder):
         return self.__decode_all(self.offsets, self.Km1, self.Kbitlen, result)
     
     def __bitlen(self, n):
-        return int(math.floor(math.log(n, 2)) + 1)
+        if n==0:
+            return 0
+        else:
+            return int(math.floor(math.log(n, 2)) + 1)
     
     def __write_at(self, a, b, offset):
         return uint32(a | b << offset)
