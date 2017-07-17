@@ -126,8 +126,10 @@ max number of compounds: 0:30 1:36 2:6 3:90 4:60 5:180 6:5 7:20
 
 Other informations
 ==================
-The identified(validated) main structures in our four tesing natural products were provided in the GAME/examples/Datasets/structures
+The identified(validated) main structures in our four tesing natural products were provided in the `GAME/examples/Datasets/structures`
 
-All seed scaffolds (*.cIdx files) in our collected database that can be used as input of the "csccp-solver-cli" program were provided in the GAME/examples/core_index
-The index(filename) of seed scaffolds of the four datasets were listed in the GAME/examples/Datasets/scaffolds. (the parameter of -c in csccp-solver-cli)
-The targeted molecular weights of the four datasets were also provided in GAME/examples/MW/. (the parameter of -m in csccp-solver-cli)
+All seed scaffolds (*.cIdx files) in our collected database that can be used as input of the "csccp-solver-cli" program were provided in the `GAME/examples/core_index`
+The index(filename) of seed scaffolds of the four datasets were listed in the `GAME/examples/Datasets/scaffolds`. (the parameter of -c in csccp-solver-cli)
+The targeted molecular weights of the four datasets were also provided in `GAME/examples/MW/`. (the parameter of -m in csccp-solver-cli)
+
+Test cases were provided in the `GAME/examples/test_case`. See `GAME/examples/test_case/test_example.txt` for their targeted molecular weights.
